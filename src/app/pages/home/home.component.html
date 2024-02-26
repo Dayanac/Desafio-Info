@@ -1,0 +1,31 @@
+  <div class="content" role="main">
+  
+    <div class="botao highlight-botao botao-small">
+      <img src="../assets/icons/car.svg" width="48px" height="48px">
+      <span class="title">Bem vindo</span>
+    </div>
+  
+    <h2>O que deseja?</h2>
+    <p>Aqui estão algumas opções de ações:</p>
+  
+    <div class="botao-container">
+      <a class="botao" routerLink="/veiculos">
+        <i class="fa fa-solid fa-car" aria-hidden="true"></i>
+        <span>Lista de Veículos</span>
+        <img src="../../../assets/icons/arrow.svg">
+      </a>
+
+      <a class="botao" (click)="onNovoVeiculo()">
+        <i class="fa fa-plus" aria-hidden="true"></i>
+        <span>Adicionar Veículo</span>
+        <img src="../../../assets/icons/arrow.svg">
+      </a>  
+  
+      <a class="botao" routerLink="/veiculos-detalhados">
+        <i class="fa fa-solid fa-list" aria-hidden="true"></i>
+        <span>Veículos Detalhados</span>
+        <img src="../../../assets/icons/arrow.svg">
+      </a>
+    </div>
+  
+  </div>

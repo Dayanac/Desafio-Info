@@ -1,0 +1,8 @@
+<div class="veiculos">
+  <div class="row px-3">
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-3" *ngFor="let veiculo of veiculos">
+      <app-card-veiculo [veiculo]="veiculo" (excluir)="excluirVeiculo(veiculo)"></app-card-veiculo>
+    </div>
+  </div>
+</div>
+

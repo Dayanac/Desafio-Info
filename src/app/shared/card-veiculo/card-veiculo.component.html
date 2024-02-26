@@ -1,0 +1,24 @@
+<nz-card class="card veiculo" [nzCover]="coverTemplate" (click)="onDetalhes()">
+  <h3 class="title"><strong> {{veiculo.marca}} {{ veiculo.modelo }} </strong></h3>
+  <nz-card-meta [nzDescription]="veiculo.descricao"></nz-card-meta>
+  <div class="footer d-flex justify-content-between">
+    <div class="d-flex infos">
+      <img src="../../../assets/icons/calendar.svg" width="15px" height="15px">
+      {{veiculo.ano}}/{{veiculo.ano}}
+    </div>
+    <div class="d-flex infos">
+      <img src="../../../assets/icons/odometro.svg" width="15px" height="15px">
+      {{veiculo.odometro}}km
+    </div>
+  </div>
+</nz-card>
+<ng-template #coverTemplate>
+  <div (click)="$event.stopPropagation()">
+    <button nz-button nzType="primary" nzShape="circle" class="excluir" nzDanger (click)="onExcluir()">
+      <span nz-icon nzType="delete" nz-tooltip nzTooltipTitle="Excluir"></span>
+    </button>
+  </div>
+  <div class="car-carousel" (click)="$event.stopPropagation()">
+    <img class="foto" (click)="onDetalhes()" src="../../../assets/imgs/veiculo_sem_imagem.png">
+  </div>
+</ng-template>

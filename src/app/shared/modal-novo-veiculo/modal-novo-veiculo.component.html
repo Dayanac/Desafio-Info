@@ -1,0 +1,95 @@
+<form nz-form [formGroup]="form">
+  <div nz-row [nzGutter]="8">
+    <div nz-col nzSpan="24">
+      <nz-form-item>
+        <nz-form-label>Placa</nz-form-label>
+        <nz-form-control nzErrorTip="Campo obrigatório">
+          <input formControlName="placa" nz-input placeholder="Digite a placa" />
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <div nz-row [nzGutter]="8">
+    <div nz-col nzSpan="24">
+      <nz-form-item>
+        <nz-form-label>Marca</nz-form-label>
+        <nz-form-control nzErrorTip="Campo obrigatório">
+          <nz-select 
+          formControlName="marca"
+          nzAllowClear
+          nzPlaceHolder="Selecione a marca">
+          <nz-option *ngFor="let marca of marcas" [nzValue]="marca.label" [nzLabel]="marca.label"></nz-option>
+        </nz-select>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col nzSpan="24">
+      <nz-form-item>
+        <nz-form-label>Modelo</nz-form-label>
+        <nz-form-control nzErrorTip="Campo obrigatório">
+          <input nz-input formControlName="modelo" placeholder="Digite o modelo" />
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <div nz-row [nzGutter]="8">
+    <div nz-col nzSpan="24">
+      <nz-form-item>
+        <nz-form-label>Chassi</nz-form-label>
+        <nz-form-control nzErrorTip="Campo obrigatório">
+          <input nz-input  formControlName="chassi" placeholder="Digite o chassi" />
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <div nz-row [nzGutter]="8">
+    <div nz-col nzSpan="24">
+      <nz-form-item>
+        <nz-form-label>Renavam</nz-form-label>
+        <nz-form-control nzErrorTip="Campo obrigatório">
+          <input nz-input formControlName="renavam" placeholder="Digite o renavam" />
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <div nz-row [nzGutter]="8">
+    <div nz-col nzSpan="24">
+      <nz-form-item>
+        <nz-form-label>Ano</nz-form-label>
+        <nz-form-control nzErrorTip="Campo obrigatório">
+          <input nz-input formControlName="ano" placeholder="Digite o ano" />
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <div nz-row [nzGutter]="8">
+    <div nz-col nzSpan="24">
+      <nz-form-item>
+        <nz-form-label>Descrição</nz-form-label>
+        <nz-form-control nzErrorTip="Campo obrigatório">
+          <input nz-input formControlName="descricao" placeholder="Digite a descrição" />
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <div nz-row [nzGutter]="8">
+    <div nz-col nzSpan="24">
+      <nz-form-item>
+        <nz-form-label>KMs</nz-form-label>
+        <nz-form-control nzErrorTip="Campo obrigatório">
+          <input nz-input formControlName="odometro" placeholder="Digite os KMs" />
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+</form>
+
+<div style="float: right">
+  <button nz-button style="margin-right: 8px;" (click)="close()">Cancel</button>
+  <button nz-button nzType="primary" (click)="submitForm()">Submit</button>
+</div>
+
+<ng-template>
+  TESTE
+  <nz-alert nzType="success" nzMessage="Veículo criado com sucesso!" nzShowIcon></nz-alert>
+</ng-template>

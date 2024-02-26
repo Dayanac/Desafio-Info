@@ -1,0 +1,12 @@
+<div class="toolbar" role="banner">
+  <div routerLink="/home">
+    <img src="../assets/icons/car.svg" width="48px" height="48px">
+    <span>{{ title }}</span>
+  </div>
+  <div class="me-4">
+    <button nz-button nzType="default" nzGhost (click)="onNovoVeiculo()">Adicionar Veículo</button>
+  </div>
+</div>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

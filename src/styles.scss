@@ -1,0 +1,151 @@
+:host {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #1976d1;
+  border: 0px none #ffffff;
+  border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover {
+  transition: 1s;
+  background: #221b5b;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #221b5b;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border: 0px none #ffffff;
+  border-radius: 15px;
+}
+::-webkit-scrollbar-track:hover {
+  transition: 1s;
+  background: #ddddef;
+}
+::-webkit-scrollbar-track:active {
+  background: #ddddef;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 8px 0;
+}
+
+p {
+  margin: 0;
+}
+
+.botao-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.botao {
+  all: unset;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  background-color: #fafafa;
+  height: 40px;
+  width: 200px;
+  margin: 0 8px 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
+}
+
+.botao-container .botao:not(:last-child) {
+  margin-right: 0;
+}
+
+.botao.botao-small {
+  height: 16px;
+  width: 168px;
+}
+
+.botao-container .botao:not(.highlight-botao) {
+  cursor: pointer;
+}
+
+.botao-container .botao:not(.highlight-botao):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
+
+.botao-container .botao:not(.highlight-botao):hover .material-icons path {
+  fill: rgb(105, 103, 103);
+}
+
+.botao.highlight-botao {
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+  border: none;
+  width: auto;
+  min-width: 20%;
+  position: relative;
+  justify-content: start;
+}
+
+.botao.botao.highlight-botao span {
+  margin-left: 20px;
+}
+
+a,
+a:visited,
+a:hover {
+  color: #1976d2 !important;
+  text-decoration: none;
+}
+
+.fa {
+  font-size: 24px;
+}
+
+.fa:not(:last-child) {
+  margin-right: 8px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+  .botao-container > *:not(.circle-link),
+  .terminal {
+    width: 100%;
+  }
+
+  .botao:not(.highlight-botao) {
+    height: 16px;
+    margin: 8px 0;
+  }
+
+  .botao.highlight-botao span {
+    margin-left: 72px;
+  }
+}
